@@ -30,3 +30,24 @@ For example:
 ))) and )())()) both result in floor -3.
 To what floor do the instructions take Santa?
  */
+#include <iostream>
+#include <string>
+
+int main() {
+  std::string input;
+  std::cin >> input;
+
+  // part 1
+  int floor = 0;
+  for (char i : input) {
+    if (i == '(') {
+      floor++;
+    } else {
+      floor--;
+    }
+  }
+
+  std::cout << floor;
+
+  return 0;
+}
